@@ -13,10 +13,8 @@ PermitRootLogin no
 X11Forwarding no
 AllowTcpForwarding no
 
-# Force sftp and chroot jail
-Subsystem sftp internal-sftp
-ForceCommand internal-sftp
-ChrootDirectory %h
+# Force rrsync
+ForceCommand /usr/bin/rrsync ~/
 
 # Enable this for more logs
 #LogLevel VERBOSE
